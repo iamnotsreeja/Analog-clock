@@ -1,0 +1,54 @@
+*{
+    margin :0;
+    padding :0;
+}
+body{
+    font-family: 'Times New Roman', Times, serif;
+    background: rgb(223, 223, 105);
+    background: radial-gradient(circle,pink,green);
+    position : relative;
+    display : flex;
+    justify-content : center;
+    align-items: center;
+    height : 100vh;
+}
+.clock{
+    background-color:  rgb(223, 223, 105);
+    width : 300px;
+    height : 300px;
+    border: 5px solid black;
+    border-radius: 50%;
+    font-size: 20px;
+    font-weight: bold;
+    display : flex;
+    justify-content : center;
+    align-items: center;
+    position: relative;
+}
+.clock ul li{
+    list-style: none;
+    position : absolute;
+    text-align: center ;
+    transform: rotate(calc(30deg  * var(--i)));
+    inset: 5px;
+}
+.clock::after{
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: #000000;
+    border-radius: 50%;
+    position: absolute;
+}
+.needle{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.needle span{
+    width: 5px;
+    height: 110px;
+    background-color:black ;
+    position: absolute;
+    border-radius: 5px;
+}
